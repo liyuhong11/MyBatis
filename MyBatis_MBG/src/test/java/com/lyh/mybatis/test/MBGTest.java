@@ -35,7 +35,7 @@ public class MBGTest {
             //创建条件对象，通过andXXX方法为SQL添加查询添加，每个条件之间是and关系
             empExample.createCriteria().andEmpNameLike("a").andAgeGreaterThan(20).andDidIsNotNull();
             //将之前添加的条件通过or拼接其他条件
-            empExample.or().andSexEqualTo("男");
+            empExample.or().andSexEqualTo("女");
             List<Emp> list = mapper.selectByExample(empExample);
             for (Emp emp : list) {
                 System.out.println(emp);
